@@ -3,8 +3,7 @@
     pageEncoding="ISO-8859-1"%>
  <%@page import="java.sql.*"%>   
     
-    
-   
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,6 +30,7 @@ String itemID = request.getParameter("Item_id");
 String name = request.getParameter("Item_Name"); 
 String des  =request.getParameter("Item_Desc"); 
 String price= request.getParameter("Item_price"); 
+String qty= request.getParameter("Stock_qty");
 
 
 %>
@@ -46,10 +46,12 @@ String price= request.getParameter("Item_price");
 		<br>Name:
 		<input id="itemName" name="itemName" value="<%=name%>"type="text"class="form-control form-control-sm">
 		
-		<input id="itemCode" name="itemCode" value="<%=itemID %>" type="hidden"class="form-control form-control-sm">
+		
+	
+		<input id="itemID" name="itemID" value="<%=itemID %>" type="hidden"class="form-control form-control-sm">
 		
 		<br>Description:
-		<input id="itemPrice" name="itemDesc" value="<%=des%>" type="text"class="form-control form-control-sm">
+		<input id="itemDes" name="itemDesc" value="<%=des%>" type="text"class="form-control form-control-sm">
 		
 		
 		<br> Price:
@@ -64,7 +66,8 @@ String price= request.getParameter("Item_price");
 		
 		<input id="btnSave" name="btnSave"  type="button" value="Add" class="btn btn-primary">
 		
-		<input type="hidden" id="hidItemIDSave"name="hidItemIDSave" value="">
+		<input id="hidItemIDSave" name="hidItemIDSave" value="" type="hidden">
+		
 		
 </form>
 

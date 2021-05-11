@@ -38,6 +38,7 @@ try{
       String name = rs.getString("Item_Name"); 
       String des = rs.getString("Item_Desc"); 
       String price= rs.getString("Item_price"); 
+      String qty =  Integer.toString(rs.getInt("Stock_qty"));
     
       if(i==3){
     	  
@@ -56,7 +57,7 @@ try{
 		
 		<td><h5 class="card-title"><%=name %></h5><br><br><br>
       	 Rs: <%= price %><br><br>
-      	  <a class="btn btn-primary" href="order.jsp?Item_id=<%=id %>&Item_Name=<%=name %>&Item_Desc=<%=des %>&Item_price=<%=price%>">Order Now</a>
+      	  <a class="btn btn-primary" href="order.jsp?Item_id=<%=id %>&Item_Name=<%=name %>&Item_Desc=<%=des %>&Item_price=<%=price%>&Stock_qty=<%=qty%>">Order Now</a>
   		</div>
   		  
   	
