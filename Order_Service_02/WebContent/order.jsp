@@ -68,7 +68,7 @@ String qty= request.getParameter("Stock_qty");
 		<h2 style="text-align:center;font-style: italic;color:white;"> Order Management </h2>
 		</div>
 		<br>		
-		<div class="container"><div class="row"><div class="col-6">
+		<div class="row justify-content-center"><div class="col-7">
 
 	
 		
