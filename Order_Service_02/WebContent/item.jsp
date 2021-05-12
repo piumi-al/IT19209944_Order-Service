@@ -2,21 +2,56 @@
 <%@page import="java.sql.*"%>  
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html>
 <html>
+
+
 <head>
 <meta charset="ISO-8859-1">
-<title>Items</title>
+<title>Item list</title>
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 
+<style>
 
+#example1 {
+color:white;
+border: 1px solid;
+padding: 6px;
+box-shadow: 3px 8px 6px 8px #888888;
+background-color:#947876;
+}
+
+body  {
+background-color:#d9d4d6;
+/*background-image:url("..imges/b.jpeg");*/
+ 
+}
+  
+ .div {
+  width: 320px;
+  padding: 10px;
+  border: 1px solid gray;
+  margin: 0;
+  background-color:white;
+}
+</style>
 </head>
+
+
+
 <body>
-<br><br>
-<h1 class="font-weight-bolder" style="text-align:center"> Items </h1>
+<br>
+
+<div id="example1">
+<h2 style="text-align:center;font-style: italic;color:white;"> Hand made items </h2>
+</div>
 <br><br><br>
 
-<table align = "center"  border="0px" cellspacing="200px" cellpadding="15px">
+
+
+
+<table align = "center"  border="0px" cellspacing="100px" cellpadding="60px">
 <%
 
 try{
@@ -44,25 +79,28 @@ try{
     	  
     	  
     	  out.print("<tr></tr>");
-    	  i=0;
+    	 
       }
-      i++;
+      
+      i++;   
+     
       
 %>
 		
 		
-		<br>
-		
+		<th >
 		<div class="card" style="width: 18rem;">
-		
-		<td><h5 class="card-title"><%=name %></h5><br><br><br>
-      	 Rs: <%= price %><br><br><br>
-      	 <a class="btn btn-primary" href="order.jsp?Item_id=<%=id %>&Item_Name=<%=name %>&Item_Desc=<%=des %>&Item_price=<%=price%>&Stock_qty=<%=qty%>">Order Now</a>
+		<div class="card-body">
+		<h4 class="card-title"><%=name %></h4><br><br>
+      	<h5 class="card-text"> Rs: <%= price %></h5> <br><br>
+      	<a class="btn btn-danger" href="order.jsp?Item_id=<%=id %>&Item_Name=<%=name %>&Item_Desc=<%=des %>&Item_price=<%=price%>&Stock_qty=<%=qty%>">Order Now</a>
   		</div>
-  		  
-  		  
-  	
+  		</div>
+  		</th>
+  		
 <%  
+
+ 
     }
    
 }catch(Exception e){
@@ -75,6 +113,7 @@ try{
 %>
 </table>
 
+  
 	
 
 </body>

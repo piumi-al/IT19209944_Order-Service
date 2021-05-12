@@ -62,7 +62,7 @@ public class Order {
 					
 					
 					// Prepare the html table to be displayed
-					output = "<table border='1'><tr><th>Order ID</th><th>Product ID</th>" + "<th>Product Name</th>"+"<th>Price</th>"+ "<th>Quantity</th>" + "<th>Order Date</th>" + "<th>Update</th><th>Remove</th></tr>";
+					output = "<table class='table table-hover' border='1'><tr><th scope='col' >Order ID</th><th scope='col'>Product ID</th>" + "<th scope='col'>Product Name</th>"+"<th scope='col'>Price</th>"+ "<th scope='col'>Quantity</th>" + "<th scope='col'>Order Date</th>" + "<th scope='col'>Update</th><th scope='col'>Remove</th></tr>";
 		
 					
 					String query = "select * from orders";
@@ -84,19 +84,21 @@ public class Order {
 		
 						
 						// Add into the html table
-						output += "<tr><td>" + orderID + "</td>";
+						output += "<tr><td >" + orderID + "</td>";
 						output += "<td>" + productID + "</td>";
 						output += "<td>" + name + "</td>";
 						output += "<td>" + price + "</td>";
 						output += "<td>" + qty + "</td>";
 						output += "<td>" + orderDate + "</td>";
 		
+					
 						 
 						// buttons
 						 output += "<td><input name='btnUpdate' type='button' value='Update' "
-						 + "class='btnUpdate btn btn-success' data-orderid='" + orderID + "'></td>"
+						 + "class='btnUpdate btn btn-secondary' data-orderid='" +  orderID+ "'></td>"
 						 + "<td><input name='btnRemove' type='button' value='Remove' "
-						 + "class='btnRemove btn btn-danger' data-orderid='" + orderID + "'></td></tr>";
+						 + "class='btnRemove btn btn-danger' data-orderid='" + orderID  + "'></td></tr>";
+						 
 					
 					}
 					con.close();

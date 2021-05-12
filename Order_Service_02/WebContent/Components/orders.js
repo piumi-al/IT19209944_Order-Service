@@ -158,23 +158,23 @@ function validateItemForm()
 // CODE
 if ($("#productID").val().trim() == "")
 {
-return "Insert Item Code.";
+return "Cannot Insert Product ID.";
 }
 // NAME
 if ($("#Name").val().trim() == "")
 {
-return "Insert Item Name.";
+return "Cannot Insert Product Name.";
 }
 //PRICE-------------------------------
 if ($("#Des").val().trim() == "")
 {
-return "Insert Item Price.";
+return "Cannot Insert Description.";
 }
 
 //PRICE-------------------------------
 if ($("#Price").val().trim() == "")
 {
-return "Insert Item Price.";
+return "Cannot Insert Price.";
 }
 // is numerical value
 var tmpPrice = $("#Price").val().trim();
@@ -187,11 +187,11 @@ $("#Price").val(parseFloat(tmpPrice).toFixed(2));
 // DESCRIPTION------------------------
 if ($("#qty").val().trim() == "")
 {
-return "Insert Item Description.";
+return "Insert Item Quantity.";
 }
 if ($("#Date").val().trim() == "")
 {
-return "Insert Date.";
+return "Insert Order Date.";
 }
 return true;
 }
