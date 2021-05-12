@@ -1,4 +1,4 @@
-<%@page import="model.Order"%>
+<%@page import="com.Order"%>
 <%@page import="java.sql.*"%>  
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -16,7 +16,7 @@
 <h1 class="font-weight-bolder" style="text-align:center"> Items </h1>
 <br><br><br>
 
-<table align = "center"  border="0px" cellspacing="40px" cellpadding="15px">
+<table align = "center"  border="0px" cellspacing="200px" cellpadding="15px">
 <%
 
 try{
@@ -50,15 +50,16 @@ try{
       
 %>
 		
-
+		
 		<br>
 		
 		<div class="card" style="width: 18rem;">
 		
 		<td><h5 class="card-title"><%=name %></h5><br><br><br>
-      	 Rs: <%= price %><br><br>
-      	  <a class="btn btn-primary" href="order.jsp?Item_id=<%=id %>&Item_Name=<%=name %>&Item_Desc=<%=des %>&Item_price=<%=price%>&Stock_qty=<%=qty%>">Order Now</a>
+      	 Rs: <%= price %><br><br><br>
+      	 <a class="btn btn-primary" href="order.jsp?Item_id=<%=id %>&Item_Name=<%=name %>&Item_Desc=<%=des %>&Item_price=<%=price%>&Stock_qty=<%=qty%>">Order Now</a>
   		</div>
+  		  
   		  
   	
 <%  
