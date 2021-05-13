@@ -19,11 +19,15 @@ color:white;
 border: 1px solid;
 padding: 6px;
 box-shadow: 3px 8px 6px 8px #888888;
-background-color:#947876;
+background: linear-gradient(90deg, rgba(227, 217, 188,1) 2%, rgba(242, 75, 109) 49%, rgba(58, 82, 94,1) 100%);  
 }
 
 body  {
-background-color:#d9d4d6;
+/*background-color:#555;*/
+
+ background: rgb(176, 172, 173);
+ background: linear-gradient(90deg, rgba(112, 134, 145,1) 0%, rgba(241, 242, 213) 49%, rgba(112, 134, 145,1) 100%);
+
 /*background-image:url("..imges/b.jpeg");*/
  
 }

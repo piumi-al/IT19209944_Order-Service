@@ -2,9 +2,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
 
-
-
-
 <!DOCTYPE html>
 <html>
 
@@ -20,23 +17,30 @@
 <style>
 
 body  {
-background-color:#d9d4d6;
- 
+background: rgb(176, 172, 173);
+background: linear-gradient(90deg, rgba(112, 134, 145,1) 0%, rgba(241, 242, 213) 49%, rgba(112, 134, 145,1) 100%);
+
 }
+
+
 #example1 {
 color:white;
 border: 1px solid;
 padding: 6px;
 box-shadow: 3px 8px 6px 8px #888888;
-background-color:#947876;
-  
+background: linear-gradient(90deg, rgba(227, 217, 188,1) 2%, rgba(242, 75, 109) 49%, rgba(58, 82, 94,1) 100%);  
 }
+
+
 table{ background-color:white; 
-width:100%;
+	   width:100%;
 }
-th { background-color:#b88c8a;
-	color:white;
-	 font-family: "Times New Roman", Times, serif; }
+
+
+th { background:rgba(58, 82, 94,8);  
+	 color:white;
+	 font-family: "Times New Roman", Times, serif; 
+}
 
 .center {
   margin-left: auto;
@@ -45,7 +49,6 @@ th { background-color:#b88c8a;
 
 h5{
   font-family: "Times New Roman", Times, serif;
-
 }
 
 </style>
@@ -82,7 +85,7 @@ String qty= request.getParameter("Stock_qty");
 		<input id="Name" name="Name"  value="<%=name%>" type="text" class="form-control">
 		
 		<br><h5>Description:</h5>
-		<textarea id="Des" name="Des" value="<%=des%>"  type="text"class="form-control "><%=des%></textarea>
+		<input id="Des" name="Des" value="<%=des%>"  type="text"class="form-control ">
 		
 		
 		<br><h5>Product Price:</h5>
@@ -115,6 +118,6 @@ String qty= request.getParameter("Stock_qty");
 </div>
 </div>
 </div>
-</div>
+
 </body>
 </html>
