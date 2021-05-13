@@ -17,18 +17,17 @@
 <style>
 
 body  {
-background: rgb(176, 172, 173);
-background: linear-gradient(90deg, rgba(112, 134, 145,1) 0%, rgba(241, 242, 213) 49%, rgba(112, 134, 145,1) 100%);
-
+/*background: rgb(252, 238, 144);*/
+background: linear-gradient(90deg, rgba(242, 242, 213,1) 0%, rgba(242, 238, 206) 49%, rgba(242, 242, 213,1) 100%);
 }
 
 
 #example1 {
-color:white;
+
 border: 1px solid;
-padding: 6px;
+padding: 8px;
 box-shadow: 3px 8px 6px 8px #888888;
-background: linear-gradient(90deg, rgba(227, 217, 188,1) 2%, rgba(242, 75, 109) 49%, rgba(58, 82, 94,1) 100%);  
+background: linear-gradient(90deg, rgba(58, 82, 94,1) 2%, rgba(242, 75, 109) 49%, rgba(227, 217, 188,1) 100%);   
 }
 
 
@@ -39,7 +38,7 @@ table{ background-color:white;
 
 th { background:rgba(58, 82, 94,8);  
 	 color:white;
-	 font-family: "Times New Roman", Times, serif; 
+	  
 }
 
 .center {
@@ -48,14 +47,14 @@ th { background:rgba(58, 82, 94,8);
 }
 
 h5{
-  font-family: "Times New Roman", Times, serif;
+  
 }
 
 </style>
 </head>
 
 <body>
-<br>
+
 <%
 
 String itemID = request.getParameter("Item_id"); 
@@ -67,10 +66,13 @@ String qty= request.getParameter("Stock_qty");
 
 %>
 
-		<div id="example1">
-		<h2 style="text-align:center;font-style: italic;color:white;"> Order Management </h2>
-		</div>
-		<br>		
+		
+<div id="example1">
+<h4 style="text-align:left;color:white;">GadgetBadget System</h4>
+</div>
+<br><br>
+
+		<h3 style="text-align:center;">Order Management</h3>		
 		<div class="row justify-content-center"><div class="col-7">
 
 	
@@ -78,30 +80,32 @@ String qty= request.getParameter("Stock_qty");
 		
 		<form id="formItem" name="formItem"  >
 
+				
+				<input id="productID" name="productID"  value="<%=itemID %>" type="hidden" class="form-control">
+				
+				<br><h6>Item Name:</h6>
+				<input id="Name" name="Name"  value="<%=name%>" type="text" class="form-control">
+				
+				<br><h6>Description:</h6>
+				<input id="Des" name="Des" value="<%=des%>"  type="text"class="form-control ">
+				
+				
+				<br><h6>Item Price:</h6>
+				<input id="Price" name="Price" value="<%=price %>"  type="text" class="form-control ">
+				
+				<br><h6>Quantity:</h6>
+				<input id="qty" name="qty" type="number" placeholder ="Select item Quantity...." class="form-control ">
+				
+				<br><h6>Order Date:</h6>
+				<input id="Date" name="Date" type="date"class="form-control ">
+				<br>
+				<input id="btnSave" name="btnSave" type="button" value="Add  Order"  class="btn btn-info">
+				
+				<input type="hidden" id="hidItemIDSave"name="hidItemIDSave" value="">
+				<br>
+				<br>
 		
-		<input id="productID" name="productID"  value="<%=itemID %>" type="hidden" class="form-control">
-		
-		<br><h5>Product Name:</h5>
-		<input id="Name" name="Name"  value="<%=name%>" type="text" class="form-control">
-		
-		<br><h5>Description:</h5>
-		<input id="Des" name="Des" value="<%=des%>"  type="text"class="form-control ">
-		
-		
-		<br><h5>Product Price:</h5>
-		<input id="Price" name="Price" value="<%=price %>"  type="text" class="form-control ">
-		
-		<br><h5>Quantity:</h5>
-		<input id="qty" name="qty" type="number" placeholder ="Select item Quantity...." class="form-control ">
-		
-		<br><h5>Order Date:</h5>
-		<input id="Date" name="Date" type="date"class="form-control ">
-		<br>
-		<input id="btnSave" name="btnSave" type="button" value="Add  Order"  class="btn btn-info">
-		
-		<input type="hidden" id="hidItemIDSave"name="hidItemIDSave" value="">
-		<br>
-</form>
+		</form>
 
 
 <br>
