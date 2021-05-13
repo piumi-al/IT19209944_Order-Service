@@ -82,7 +82,7 @@ String qty= request.getParameter("Stock_qty");
 		<input id="Name" name="Name"  value="<%=name%>" type="text" class="form-control">
 		
 		<br><h5>Description:</h5>
-		<input id="Des" name="Des" value="<%=des%>"  type="text"class="form-control ">
+		<textarea id="Des" name="Des" value="<%=des%>"  type="text"class="form-control "><%=des%></textarea>
 		
 		
 		<br><h5>Product Price:</h5>
