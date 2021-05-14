@@ -1,3 +1,7 @@
+/**IT19209944
+ * W.B.W.M.R.U.P.U.Aluvihare
+ */
+
 package com;
 
 import java.sql.Connection;
@@ -39,10 +43,10 @@ public class Order {
 	
 		
 		
-		 /*
-		    * view all order details
-	        */
-			public String viewOrders() {
+	   /*
+		* view all order details
+	    */
+		public String viewOrders() {
 			
 				
 				String output = "";
@@ -117,7 +121,7 @@ public class Order {
 				
 				return output;
 				
-			}
+		}
 		
 		
 		
@@ -127,12 +131,12 @@ public class Order {
 		
 		
 			 
-			/*
-			 * add orders to the system
-			 */
-			 public String addOrders( String productID ,String Name ,String Price ,int qty,String Date  ){
+		/*
+		 * add orders to the system
+		 */
+		 public String addOrders( String productID ,String Name ,String Price ,int qty,String Date  ){
 			
-				 int items_qty=0;
+				int items_qty=0;
 				boolean validate = false;
 				String output = "";
 		
@@ -222,7 +226,7 @@ public class Order {
 						}
 					
 					
-					}
+					 }
 				
 						catch (Exception e)
 						{
@@ -236,7 +240,7 @@ public class Order {
 					
 					
 					
-				}
+			}
 				
 				
 		
@@ -245,10 +249,10 @@ public class Order {
 			 
 
 				
-			  /*
-			   * update order items quantity
-			   */ 
-			   public String updateOrders(String orderID,String qty) {
+			/*
+			 * update order items quantity
+			 */ 
+			 public String updateOrders(String orderID,String qty) {
 				
 					
 					String output = "";
@@ -299,12 +303,9 @@ public class Order {
 			
 			
 			
-			   /*
-				* delete order details
-				*/ 
-				
-				
-
+		   /*
+			* delete order details
+			*/ 
 			public String deleteOrders(String orderID) {
 				
 				
@@ -312,6 +313,8 @@ public class Order {
 				String output = "";
 				
 						try {
+							
+							
 							Connection con = connect();
 							if (con == null) {
 
@@ -323,8 +326,10 @@ public class Order {
 							String query = "delete from orders where orderID=?";
 							PreparedStatement preparedStmt = con.prepareStatement(query);
 							
+							
 							// binding values
 							preparedStmt.setInt(1, Integer.parseInt(orderID));
+							
 							
 							// execute the statement
 							preparedStmt.execute();
@@ -332,12 +337,17 @@ public class Order {
 							
 							String newItems = viewOrders();
 							output = "{\"status\":\"success\", \"data\": \"" + newItems + "\"}";
+							
+							
 						} catch (Exception e) {
+							
 							output = "{\"status\":\"error\", \"data\":\"Error while deleting order.\"}";
 							System.err.println(e.getMessage());
 						}
+						
 						return output;
-					}
+						
+			}
 				
 				
 				
