@@ -3,8 +3,8 @@
 Developing a rich front-end for the User service in the GadgetBadget e-commerce system.
 
 
-*Select Items.
-*Add Items.
-*Update Items.
-*Delete Items.
+Select Items. 
+Add Items. 
+Update Items.
+Delete Items.
 
